@@ -1,8 +1,9 @@
-#/usr/bin/env python
-
+#!/usr/bin/env python
 #shebang line to inform the OS that the content its in python
 
-#Exercice 2
+from colorama import Fore, Back, Style
+
+#Exercice 3
 
 maximum_number = 10000
 
@@ -16,7 +17,7 @@ def isPrime(value):
         return False
     a=5
     while a * a <= value:
-        if value % 1 == 0 or value % (a+2) == 0:
+        if value % a == 0 or value % (a+2) == 0:
             return False
         a += 6
     return True
