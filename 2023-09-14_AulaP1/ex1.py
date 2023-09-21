@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #shebang line to inform the OS that the content its in python
 
 from colorama import Fore, Back, Style
@@ -27,9 +27,9 @@ def main():
 
     for i in range(0, maximum_number):
         if isPrime(i):
-            print('Number ' + str(i) + ' is prime.')
+            print(Fore.GREEN + 'Number ' + str(i) + ' is prime.' + Style.RESET_ALL)
         else:
-            print('Number ' + str(i) + ' is not prime.')
+            print(Fore.RED + 'Number ' + str(i) + ' is not prime.' + Style.RESET_ALL)
 
 if __name__ == "__main__":
     main()
