@@ -24,6 +24,7 @@ def readAllUpTo(stopChar):
     persString=''
     while True:
         key = readchar.readkey()
+        print()
 
         if key == stopChar:
             break
@@ -36,9 +37,11 @@ def countNumbersUpTo(stopChar):
 
     total_numbers = 0
     total_others = 0
+    charlist=[]
     while True:
         key = readchar.readkey()
-
+        charlist.append(key)
+        print(key+'\n'+'String: '+''.join(charlist))
         if key == stopChar:
             break        
         
