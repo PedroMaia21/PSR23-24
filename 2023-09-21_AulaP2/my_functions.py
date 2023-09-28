@@ -38,6 +38,10 @@ def countNumbersUpTo(stopChar):
     total_numbers = 0
     total_others = 0
     charlist=[]
+    numericalKeys=[]
+    dKeys={}
+    sortedNumerical=[]
+    i=0
     while True:
         key = readchar.readkey()
         charlist.append(key)
@@ -47,8 +51,17 @@ def countNumbersUpTo(stopChar):
         
         if key.isnumeric():
             total_numbers+=1
+            numericalKeys.append(key)
+
         else:
             total_others+=1
+        dKeys[i]=key
+        i+=1
+
 
     print('You entered ' + str(total_numbers) + ' numbers.')
     print('You entered ' + str(total_others) + ' others.')
+    print('The key dictionary is: '+str(dKeys))
+    print('The numerical keys were: '+ str(numericalKeys))
+    sortedNumerical=numericalKeys.sort()
+    print('The numeircal keys sorted are: '+str(numericalKeys))
